@@ -1,5 +1,7 @@
 import { Markup, Telegraf } from "telegraf";
 import VARIABLES from "./utils/variables";
+import buttonFn from "./controllers/reusable/button";
+import removeBtn from "./controllers/commands/removebtn";
 
 const bot = new Telegraf(VARIABLES.token);
 
@@ -28,14 +30,7 @@ bot.action(/^btn_[a-zA-Z]+$/, (ctx: any) => {
     ctx.reply(`${data} bosildi`);
 });
 
-bot.command("removebtn", ctx => ctx.reply("btn tozalandi",Markup.removeKeyboard()))
-
-bot.on("text", ctx =>{
-    const text = ctx.message.text;
-    const keyboard = [];
-    text.split(" ").forEach((i) => keyboard.push([{text:i}]));
-    const test  = Markup.keyboard(keyboard).resize();
-    ctx.reply(`siz yuborgan matn: ${text}`, test);
-});
+bot.command("removebtn", ctx => removeBtn(ctx))
+bot.on("text", ctx => buttonFn(ctx));
 
 bot.launch({dropPendingUpdates:true});
