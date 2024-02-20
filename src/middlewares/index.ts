@@ -1,9 +1,9 @@
 import { Telegraf } from "telegraf";
-import first from "./first";
+import checkUser from "./checkUser";
 
 
 const allMiddlewares = (bot: Telegraf) =>{
-    bot.use(first);
+    bot.use(checkUser)
 }
 
 export default allMiddlewares;

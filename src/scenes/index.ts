@@ -1,11 +1,11 @@
 import { Scenes, Telegraf } from "telegraf";
-import nameScene from "./name";
+import authScene from "./auth";
 
 
 const stage = new Scenes.Stage();
 
 const allScenes = (bot: Telegraf) =>{
-    stage.register(nameScene);
+    stage.register(authScene);
     bot.use(stage.middleware());
 }
 
