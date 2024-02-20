@@ -1,5 +1,5 @@
 import { Context } from "telegraf";
-import { Message, Update } from "telegraf/typings/core/types/typegram";
+import { CallbackQuery, Message, Update } from "telegraf/typings/core/types/typegram";
 
 
 export interface BotCtx extends Context{
@@ -8,5 +8,7 @@ export interface BotCtx extends Context{
     & Message
     & Message.TextMessage 
     & Message.AudioMessage
-    & Message.VideoMessage
+    & Message.VideoMessage;
+
+    update: Update.CallbackQueryUpdate<CallbackQuery.DataQuery>
 }

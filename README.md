@@ -1,1 +1,1 @@
-telegraf kutubhonasi orqali yozilgan telegram bot.
+3-qism
