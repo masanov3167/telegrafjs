@@ -4,6 +4,8 @@ import myFn from "../../utils/functions";
 
 
 const fn  =( ctx: BotCtx) =>{
+    console.log(ctx.session);
+    
     ctx.reply("btn tozalandi",Markup.removeKeyboard())
 }
 
