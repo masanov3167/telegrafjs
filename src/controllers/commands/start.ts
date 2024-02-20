@@ -2,8 +2,9 @@ import { BotCtx } from "../../types/context";
 import myFn from "../../utils/functions";
 
 const fn = (ctx: BotCtx) =>{
-    ctx.reply("botga raqam yuborildi")
+    ctx.reply("Assalomu alaykum!")
 }
-const numberFn = ctx => myFn(ctx, fn);
 
-export default numberFn
+const startFn = (ctx) => myFn(ctx, fn);
+
+export default startFn;
