@@ -14,7 +14,8 @@ export interface BotCtx extends Context{
     & Message
     & Message.TextMessage 
     & Message.AudioMessage
-    & Message.VideoMessage;
+    & Message.VideoMessage
+    & Message.PhotoMessage;
 
     update: Update.CallbackQueryUpdate<CallbackQuery.DataQuery>
 }
