@@ -9,6 +9,7 @@ const checkUser = async(ctx: BotCtx, next : () => void) =>{
         ctx.scene.enter("auth")
         return
     }
+    ctx.session.userValue = user
     next();
 }
 

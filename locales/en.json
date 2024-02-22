@@ -1,0 +1,12 @@
+{
+    "start": {
+        "text": "Hello $1",
+        "keyboard": {
+            "createimg": "create img",
+            "changelang": "change language"
+        }
+    },
+    "lang": {
+        "text": "choose language"
+    }
+}

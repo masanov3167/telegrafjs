@@ -30,7 +30,9 @@ const checkPoneNumber = async(ctx: BotCtx) =>{
     if(text){
         if(regexes.phone.test(text)){
             ctx.scene.leave();
-            const newUser = new USERS({name, phone: text, tg_id: ctx.from.id});
+            console.log(ctx.from.language_code);
+            
+            const newUser = new USERS({name, phone: text, tg_id: ctx.from.id, lang: ctx.from.language_code ?? "uz"});
             await newUser.save();
             ctx.reply("Siz muvaffaqiyatli ro'yhatdan o'tdingiz")
         }else{

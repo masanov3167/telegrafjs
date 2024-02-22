@@ -1,8 +1,10 @@
 import { Context, Scenes } from "telegraf";
 import { CallbackQuery, Message, Update } from "telegraf/typings/core/types/typegram";
+import { IUser } from "../schemas/users";
 
 interface sessionData extends Scenes.WizardSession{
     name: string;
+    userValue?: IUser
 }
 
 export interface BotCtx extends Context{

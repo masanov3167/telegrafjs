@@ -1,0 +1,12 @@
+{
+    "start": {
+        "text": "Salom $1",
+        "keyboard": {
+            "createimg": "Rasm yasash",
+            "changelang": "Tilni o'zgartirish"
+        }
+    },
+    "lang": {
+        "text": "Tilni tanlang"
+    }
+}
