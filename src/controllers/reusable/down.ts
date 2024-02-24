@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from "fs";
+import { readFileSync, unlinkSync, writeFileSync } from "fs";
 import { BotCtx } from "../../types/context";
 import myFn from "../../utils/functions";
 import VARIABLES from "../../utils/variables";
@@ -24,9 +24,10 @@ const handler = async(ctx: BotCtx) =>{
            const filePath = path.join("downloads", filename)
            writeFileSync(filePath, buffer);
            const source = readFileSync(filePath);
-           ctx.replyWithDocument({source, filename},{
+           await ctx.replyWithDocument({source, filename},{
                caption:`username: ${userName}\nrepoName: ${repoName}\nbranch: ${branchName}`
-           })
+           });
+           unlinkSync(filePath);
        }
 
         
