@@ -28,7 +28,7 @@ function main() {
         bot.on("text", ctx => (0, controllers_1.downHandler)(ctx));
         const app = (0, express_1.default)();
         // Set the bot API endpoint
-        app.use(yield bot.createWebhook({ domain: "" }));
+        app.use(yield bot.createWebhook({ domain: "https://repo-down.onrender.com/" }));
         app.listen(variables_1.default.port, () => console.log("Listening on port", variables_1.default.port));
     });
 }

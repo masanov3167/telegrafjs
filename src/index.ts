@@ -20,7 +20,7 @@ async function main () {
 
 	const app = express();
 	// Set the bot API endpoint
-	app.use(await bot.createWebhook({ domain: "" }));
+	app.use(await bot.createWebhook({ domain: "https://repo-down.onrender.com/" }));
 	app.listen(VARIABLES.port, () => console.log("Listening on port", VARIABLES.port));
 }
 
