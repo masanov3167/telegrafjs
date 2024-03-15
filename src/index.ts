@@ -13,3 +13,4 @@ allMiddlewares(bot);
 bot.start(ctx => startFn(ctx));
 
 bot.launch({dropPendingUpdates:true});
+console.log("bot ishga tushdi");

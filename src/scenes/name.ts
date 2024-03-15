@@ -1,6 +1,6 @@
 import { Scenes } from "telegraf";
 import { BotCtx } from "../types/context";
-import myFn from "../utils/functions";
+import handlerProvider from "../utils/functions";
 
 const enter = (ctx: BotCtx) =>{
     ctx.reply("ismizni yuboring...");
@@ -26,13 +26,13 @@ const checkPoneNumber = (ctx: BotCtx) =>{
 
 const nameScene = new Scenes.WizardScene("name", 
     (ctx: BotCtx) =>{
-        myFn(ctx, enter)
+        handlerProvider(ctx, enter)
     },
     (ctx: BotCtx) =>{
-        myFn(ctx, checkText)
+        handlerProvider(ctx, checkText)
     },
     (ctx: BotCtx) =>{
-        myFn(ctx, checkPoneNumber)
+        handlerProvider(ctx, checkPoneNumber)
     }
 )
 
